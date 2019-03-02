@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/buttonDump"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:onClick="buttonDump_Click"
+        android:text="DUMP INFO"
+        app:layout_constraintStart_toEndOf="@+id/editMaxId"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editMaxId"
+        android:layout_width="65dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:cursorVisible="false"
+        android:ems="10"
+        android:focusedByDefault="false"
+        android:inputType="number"
+        android:maxLength="9"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:text="50"
+        android:textAlignment="center"
+        app:layout_constraintStart_toEndOf="@+id/editMinId"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Max. ID"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="@+id/editMaxId"
+        app:layout_constraintStart_toStartOf="@+id/editMaxId"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewLog"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:gravity="bottom"
+        android:scrollbarAlwaysDrawHorizontalTrack="false"
+        android:scrollbarAlwaysDrawVerticalTrack="true"
+        android:scrollbarSize="20dp"
+        android:scrollbarStyle="outsideOverlay"
+        android:scrollbars="vertical"
+        android:text="** Download Provider PoC Exploit **\n   Author: Daniel Kachakil [IOActive]\n\n"
+        android:typeface="monospace"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.065"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonOverwrite" />
+
+    <Button
+        android:id="@+id/buttonOverwrite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:onClick="buttonOverwrite_Click"
+        android:text="OVERWRITE"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editMinId" />
+
+    <Button
+        android:id="@+id/buttonService"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:onClick="buttonStartService_Click"
+        android:text="START SERVICE"
+        app:layout_constraintStart_toEndOf="@+id/buttonOverwrite"
+        app:layout_constraintTop_toBottomOf="@+id/editMaxId" />
+
+    <EditText
+        android:id="@+id/editMinId"
+        android:layout_width="65dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:cursorVisible="false"
+        android:ems="10"
+        android:focusedByDefault="false"
+        android:inputType="number"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:text="0"
+        android:textAlignment="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Min. ID"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="@+id/editMinId"
+        app:layout_constraintStart_toStartOf="@+id/editMinId"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Switch
+        android:id="@+id/switchCloseFiles"
+        android:layout_width="80dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="4dp"
+        android:text="Close files"
+        android:textAlignment="center"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="@+id/buttonService"
+        app:layout_constraintStart_toEndOf="@+id/buttonService"
+        app:layout_constraintTop_toTopOf="@+id/buttonService" />
+
+</android.support.constraint.ConstraintLayout>
